@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <h2>User Registration</h2>
+    <form action="/view" method="POST">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>id number</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Mobile Number</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Pin Code</th>
+                    <th>train name</th>
+                    <th>train number</th>
+                    <th>arrival time</th>
+                    <th>destination</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user[0] }}</td>
+                    <td>{{ user[1] }}</td>
+                    <td>{{ user[2] }}</td>
+                    <td>{{ user[3] }}</td>
+                    <td>{{ user[4] }}</td>
+                    <td>{{ user[5] }}</td>
+                    <td>{{ user[6] }}</td>
+                    <td>{{ user[7] }}</td>
+                    <td>{{ user[8] }}</td>
+                    <td>{{ user[9] }}</td>
+                    <td>{{ user[10] }}</td>
+                    <td>{{ user[11] }}</td>
+                    <td>{{ user[12] }}</td>
+                    <td>{{ user[13] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
